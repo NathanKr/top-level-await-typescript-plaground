@@ -1,0 +1,27 @@
+{
+  "name": "top-level-await-typescript-plaground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "rollup -c -w",
+    "dev": "node --watch dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NathanKr/top-level-await-typescript-plaground.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NathanKr/top-level-await-typescript-plaground/issues"
+  },
+  "homepage": "https://github.com/NathanKr/top-level-await-typescript-plaground#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.1",
+    "rollup": "^3.25.1",
+    "tslib": "^2.5.3"
+  }
+}
