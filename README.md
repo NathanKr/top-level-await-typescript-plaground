@@ -72,3 +72,28 @@ export {}
 
 <h2>Reference</h2>
 <a href='https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await'>typescript offical documentation</a>
+
+<h2>Points of interest</h2>
+<ul>
+<li>
+the resulting dist/index.js is the following and it is working inside this project
+
+```js
+console.log('index.ts is running');
+const pauseMs = (ms) => new Promise(res => setTimeout(res, ms));
+/*
+This is not required as of ts 3.8
+async function callApi() {
+     console.log('before pasue');
+     await pauseMs(2000);
+     console.log('after pasue');
+ }
+ callApi()
+*/
+console.log('before pasue');
+await pauseMs(2000);
+console.log('after pasue');
+```
+</li>
+<li>if you take the code of dist/index.js to a clean direcotry outside of this project it will not work - not clear why<li>
+</ul>
