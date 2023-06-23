@@ -95,5 +95,5 @@ await pauseMs(2000);
 console.log('after pasue');
 ```
 </li>
-<li>if you take the code of dist/index.js to a clean direcotry outside of this project it will not work - not clear why<li>
+<li>if you take the code of dist/index.js to a clean direcotry outside of this project it will not work. the solution is to add package.json and then it will work. Probably because node.js read package.json and "type":"module" is required<li>
 </ul>
