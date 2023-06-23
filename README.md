@@ -70,12 +70,10 @@ console.log('after pasue');
 export {}
 ```
 
-<h2>Reference</h2>
-<a href='https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await'>typescript offical documentation</a>
 
 <h2>Points of interest</h2>
-<ul>
-<li>
+<ol>
+<li><h4>the resulting dist/index.js</h4>
 the resulting dist/index.js is the following and it is working inside this project
 
 ```js
@@ -95,5 +93,18 @@ await pauseMs(2000);
 console.log('after pasue');
 ```
 </li>
-<li>if you take the code of dist/index.js to a clean direcotry outside of this project it will not work. the solution is to add package.json and then it will work. Probably because node.js read package.json and "type":"module" is required<li>
-</ul>
+<li><h4>run node.js without package.json </h4>
+<h5>js module format problem</h5>
+in general dist directory can be used stand alone on production . However, if you take the code of dist/index.js to a clean direcotry outside of this project it will not work - and this is confusing. You will get an error
+
+```
+SyntaxError: await is only valid in async functions and the top level bodies of modules
+```
+<p>This is because node.js read package.json on runtime and "type":"module" means using module format of es module (esm). However, node will use its default module format - CommonJs (cjs) if package.json does not appear (check <a href='https://nodejs.org/api/packages.html#packagejson-and-file-extensions'>here</a>). And "top level await" feature does not appears in cjs</p>
+<h5>js module format solution</h5>
+The solution is to add package.json and then it will work</li>
+</ol>
+
+
+<h2>Reference</h2>
+<a href='https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await'>typescript offical documentation</a>
