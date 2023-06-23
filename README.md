@@ -36,10 +36,13 @@ export {}
 
 <h2>Usage</h2>
 compile in one terminal using 
+
 ```
 npm run build
 ```
+
 run from another  
+
 ```
 npm run build
 ```
