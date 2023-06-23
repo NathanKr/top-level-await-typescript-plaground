@@ -1,4 +1,4 @@
-console.log('index.ts is running');
+console.log('index is running');
 const pauseMs = (ms : number) => new Promise(res => setTimeout(res, ms))
 
 /*
