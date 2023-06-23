@@ -1,5 +1,8 @@
+<h2>Introduction</h2>
+top level await in typescript was introduced in version 3.8. using this feature you dont need to wrap awaited code with function and async
+
 <h2>Motivation</h2>
-Use top level await
+experiment with top level await in typescript.
 
 <h2>Setup</h2>
 <ol>
@@ -31,7 +34,7 @@ export {}
 <li>
 </ol>
 
-<h2>Invokation</h2>
+<h2>Usage</h2>
 compile in one terminal using 
 ```
 npm run build
@@ -63,3 +66,6 @@ console.log('after pasue');
 
 export {}
 ```
+
+<h2>Reference</h2>
+<a href='https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-8.html#top-level-await'>typescript offical documentation</a>
